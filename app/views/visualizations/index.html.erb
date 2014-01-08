@@ -1,0 +1,32 @@
+<h1>Listing visualizations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th> Code</th>
+      <th>Description</th>
+      <th>  </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @visualizations.each do |visualization| %>
+      <tr>
+		<td><%=visualization.name%></td>
+		<td><%=visualization.code%> </td>
+		<td><%=visualization.description%></td>
+<td>   </td>
+		<td><%= link_to 'Edit', edit_visualization_path(visualization) %></td>
+		<td><%= link_to 'Show', visualization %></td>
+		<td><%= link_to "Delete", visualization, :confirm => "Delete Visualization?", :method => :delete %></td>
+        
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Visualization', new_visualization_path %>

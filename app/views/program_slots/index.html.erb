@@ -1,0 +1,34 @@
+<%- model_class = ProgramSlot -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped display" id="program_slots" data-source="<%= program_slots_url(format: "json") %>" >
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:program_id) %></th>
+      <th><%= model_class.human_attribute_name(:market_id) %></th>
+      <th><%= model_class.human_attribute_name(:channel_id) %></th>
+      <th><%= model_class.human_attribute_name(:infosys_start) %></th>
+      <th><%= model_class.human_attribute_name(:infosys_end) %></th>
+      <th><%= model_class.human_attribute_name(:infosys_airdate) %></th>
+      <th><%= model_class.human_attribute_name(:infosys_day) %></th>
+      <th><%= model_class.human_attribute_name(:calendar_start) %></th>
+      <th><%= model_class.human_attribute_name(:calendar_end) %></th>
+      <th><%= model_class.human_attribute_name(:calendar_airdate) %></th>
+      <th><%= model_class.human_attribute_name(:timeslot) %></th>
+      <th><%= model_class.human_attribute_name(:normalized_start_time) %></th>
+      <th><%= model_class.human_attribute_name(:normalized_date) %></th>
+      <th><%= model_class.human_attribute_name(:normalized_end_time) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_program_slot_path,
+            :class => 'btn btn-primary' %>

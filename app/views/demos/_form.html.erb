@@ -1,0 +1,24 @@
+<%= simple_form_for @demo, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :program_slot_id %>
+  <%= f.input :metric_type %>
+  <%= f.input :Ind.2+ %>
+  <%= f.input :A18+ %>
+  <%= f.input :A25-54 %>
+  <%= f.input :A18-49 %>
+  <%= f.input :A18-34 %>
+  <%= f.input :A55+ %>
+  <%= f.input :F25-54 %>
+  <%= f.input :F18-49 %>
+  <%= f.input :F18-34 %>
+  <%= f.input :M25-54 %>
+  <%= f.input :M18-49 %>
+  <%= f.input :M18-34 %>
+  <%= f.input :A12-34 %>
+  <%= f.input :T12-17 %>
+  <%= f.input :C2-11 %>
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                demos_path, :class => 'btn' %>
+  </div>
+<% end %>

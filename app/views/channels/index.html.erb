@@ -1,0 +1,23 @@
+<%- model_class = Channel -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped display" id="channels" data-source="<%= channels_url(format: "json") %>" >
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%= model_class.human_attribute_name(:updated_at) %></th>
+      <th><%= model_class.human_attribute_name(:channel_name) %></th>
+      <th><%= model_class.human_attribute_name(:classification) %></th>
+	 <th><%= model_class.human_attribute_name(:ownership) %></th>
+     
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_channel_path,
+            :class => 'btn btn-primary' %>

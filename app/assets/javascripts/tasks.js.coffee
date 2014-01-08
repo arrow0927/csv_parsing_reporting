@@ -1,0 +1,21 @@
+# Place all the behaviors and hooks related to the matching controller here.
+# All this logic will automatically be available in application.js.
+# You can use CoffeeScript in this file: http://coffeescript.org/
+$(document).ready -> 
+	console.log("before datatables init")
+	$("#tasks").dataTable
+		sPaginationType: "full_numbers" 
+		bJQueryUI:true
+		bProcessing:true
+		bServerSide:true
+		sAjaxSource: $('#tasks').data('source')
+	console.log("after datatables init")
+
+
+# $ ->
+#   $("#toggletasksButton").click ->
+#     $("#instructions").toggle "5000", ->
+#       if $("#instructions").is(":visible")
+#         $("#toggleButton").val "Hide Instructions"
+#       else
+#         $("#toggleButton").val "Show Instructions"

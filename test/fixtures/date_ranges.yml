@@ -1,0 +1,22 @@
+# == Schema Information
+#
+# Table name: date_ranges
+#
+#  id          :integer          not null, primary key
+#  date_range  :string(255)
+#  description :text
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date_range: MyString
+  description: MyText
+  upload_id: 1
+
+two:
+  date_range: MyString
+  description: MyText
+  upload_id: 1

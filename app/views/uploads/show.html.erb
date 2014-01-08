@@ -1,0 +1,30 @@
+
+<%= button_to 'Back to Uploads Page', uploads_path, :method=>:get %>
+
+
+<%@u = Upload.find(params[:id]) %>
+<div  id="upload_show">
+<table class="table table-striped">
+  <thead>
+    <tr> 
+	  <th>File name</th>
+	  <th>Upload Date,Time</th>
+	  <th>File Type</th>
+	  <th>Program Dates in file</th>
+	  <th>Total Rows</th>
+	  <th>Rows read</th>
+	  <th>Status</th>
+    </tr>
+  </thead>
+  <tbody id="show_table_rows">
+    <%= render :partial=> "show_upload", :object=>@u %> 
+  </tbody>
+</div>
+
+
+<%= p = "#{Rails.root}" + "#{@u.f_path.split('imports')[1]}"%>
+<pre >
+<%=render :file => "#{@u.f_path}"%>
+</pre>
+
+

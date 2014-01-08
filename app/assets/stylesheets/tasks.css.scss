@@ -1,0 +1,114 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.upload_tasks_button
+{
+background-color:#2fd62f;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border-radius:4px;
+    border:1px solid #dcdcdc;
+    display:inline-block;
+    color:#0;
+    font-family:arial;
+    font-size:12px;
+    font-weight:bold;
+    padding:7px 24px;
+    text-decoration:none;
+    text-shadow:0px 0px 0px #70706f;
+}
+.upload_tasks_button:hover {
+    background-color:#a9d0f5;
+}
+
+.upload_tasks_button:active {
+    position:relative;
+    top:1px;
+}
+
+
+
+.paginate_disabled_previous , .paginate_disabled_next
+	{
+width:50px;
+display: inline-block;
+padding: 4px 12px;
+margin-bottom: 0;
+font-size: 14px;
+line-height: 20px;
+text-align: center;
+vertical-align: middle;
+cursor: pointer;
+color: #333333;
+text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+background-color: #f5f5f5;
+background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+background-repeat: repeat-x;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+border: 1px solid #cccccc;
+border-bottom-color: #b3b3b3;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+
+
+
+cursor: default;
+background-image: none;
+opacity: 0.65;
+filter: alpha(opacity=65);
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+box-shadow: none;
+
+display: none;
+}
+	
+
+.paginate_enabled_next, .paginate_enabled_previous
+{
+width: 50px;
+display: inline-block;
+padding: 4px 12px;
+margin-bottom: 0;
+font-size: 14px;
+line-height: 20px;
+text-align: center;
+vertical-align: middle;
+cursor: pointer;
+color: #333333;
+text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+background-color: #f5f5f5;
+background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+background-repeat: repeat-x;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+border: 1px solid #cccccc;
+border-bottom-color: #b3b3b3;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+
+}
+
+

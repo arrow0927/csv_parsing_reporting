@@ -1,0 +1,39 @@
+<%- model_class = Demo -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped display" id="demos" data-source="<%= demos_url(format: "json") %>" >
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name("id") %></th>
+      <th><%= model_class.human_attribute_name("created_at") %></th>
+      <th><%= model_class.human_attribute_name("updated_at") %></th>
+	        <th><%= model_class.human_attribute_name(:program_slot_id) %></th>
+      <th><%= model_class.human_attribute_name(:metric_type) %></th>
+      <th><%= model_class.human_attribute_name(:"Ind2+") %></th>
+      <th><%= model_class.human_attribute_name(:"A18+") %></th>
+      <th><%= model_class.human_attribute_name(:"A25-54") %></th>
+      <th><%= model_class.human_attribute_name(:"A18-49") %></th>
+      <th><%= model_class.human_attribute_name(:"A18-34") %></th>
+      <th><%= model_class.human_attribute_name(:"A55+ ") %></th>
+      <th><%= model_class.human_attribute_name(:"F25-54") %></th>
+      <th><%= model_class.human_attribute_name(:"F18-49 ") %></th>
+      <th><%= model_class.human_attribute_name(:"F18-34") %></th>
+      <th><%= model_class.human_attribute_name(:"M25-54") %></th>
+	<th><%= model_class.human_attribute_name(:"M18-49") %></th>
+	<th><%= model_class.human_attribute_name(:"M18-34") %></th>
+	<th><%= model_class.human_attribute_name(:"A12-34") %></th>
+	  
+    </tr>
+  </thead>
+
+
+  <tbody>
+ <td></td>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_demo_path,
+            :class => 'btn btn-primary' %>
+

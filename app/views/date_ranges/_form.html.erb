@@ -1,0 +1,10 @@
+<%= simple_form_for @date_range, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :date_range %>
+  <%= f.input :description %>
+  <%= f.input :upload_id %>
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                date_ranges_path, :class => 'btn' %>
+  </div>
+<% end %>

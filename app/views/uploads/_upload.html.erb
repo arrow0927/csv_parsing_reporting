@@ -1,0 +1,110 @@
+<tr id= "uploads_table_rows">
+		<%if (upload.status == 0 ) %>
+			<%if (["1","2","3","4"].include?"#{upload.status}") %>
+				<td class="red_row"> <%= button_to "View File: #{upload.sourcedata_file_name}", upload,  :method=>:get%></td>
+			<%else%>
+				<td class="red_row"> <%= "#{upload.sourcedata_file_name}"%></td>
+			<%end%>
+			 <% path_arr = upload.f_path.split("\/")%>
+		<td class="red_row"><%= path_arr[-3..-2].join(", ").gsub!("_", "\:")%></td>
+		<td class="red_row"> <%= upload.sourcedata_content_type%></td>
+		<td class="red_row"> <%= upload.date_ranges.pluck(:date_range).join(", ")%>
+		<td class="red_row"> <%= upload.total_rows%></td>
+		<td class="red_row"> <%= upload.rows_completed%></td>
+        <td class="red_row"> <%= number_to_percentage(upload.percentage_complete, :precision => 0)%></td>
+		</td>			
+			<td class="red_row">Error- Contact Ash </td>
+			<td class="red_row"></td>	
+		<%elsif (upload.status == 1 ) %>
+<%if (["1","2","3","4"].include?"#{upload.status}") %>
+				<td class="grey_row"> <%= button_to "View File: #{upload.sourcedata_file_name}", upload,  :method=>:get%></td>
+			<%else%>
+				<td class="grey_row"> <%= "#{upload.sourcedata_file_name}"%></td>
+			<%end%>
+			 <% path_arr = upload.f_path.split("\/")%>
+		<td class="grey_row"><%= path_arr[-3..-2].join(", ").gsub!("_", "\:")%></td>
+		<td class="grey_row"> <%= upload.sourcedata_content_type%></td>
+		<td class="grey_row"> <%= upload.date_ranges.pluck(:date_range).join(", ")%>
+		<td class="grey_row"> <%= upload.total_rows%></td>
+		<td class="grey_row"> <%= upload.rows_completed%></td>
+        <td class="grey_row"> <%= number_to_percentage(upload.percentage_complete, :precision => 0)%></td>
+		</td>				
+<td class="grey_row">File saved-Click button to start parsing</td>
+			<td class="grey_row"><%= render 'button', :upload => upload%></td>
+		<%elsif (upload.status == 3 ) %>
+<%if (["1","2","3","4"].include?"#{upload.status}") %>
+				<td class="red_row"> <%= button_to "View File: #{upload.sourcedata_file_name}", upload,  :method=>:get%></td>
+			<%else%>
+				<td class="red_row"> <%= "#{upload.sourcedata_file_name}"%></td>
+			<%end%>
+			 <% path_arr = upload.f_path.split("\/")%>
+		<td class="red_row"><%= path_arr[-3..-2].join(", ").gsub!("_", "\:")%></td>
+		<td class="red_row"> <%= upload.sourcedata_content_type%></td>
+		<td class="red_row"> <%= upload.date_ranges.pluck(:date_range).join(", ")%>
+		<td class="red_row"> <%= upload.total_rows%></td>
+		<td class="red_row"> <%= upload.rows_completed%></td>
+        <td class="red_row"> <%= number_to_percentage(upload.percentage_complete, :precision => 0)%></td>
+		</td>				
+			<td class="red_row">Parsing in progress.......</td>	
+			<td class="red_row"></td>	
+		<%elsif (upload.status == 2 ) %>
+
+<%if (["1","2","3","4"].include?"#{upload.status}") %>
+				<td class="green_row"> <%= button_to "View File: #{upload.sourcedata_file_name}", upload,  :method=>:get%></td>
+			<%else%>
+				<td class="green_row"> <%= "#{upload.sourcedata_file_name}"%></td>
+			<%end%>
+			 <% path_arr = upload.f_path.split("\/")%>
+		<td class="green_row"><%= path_arr[-3..-2].join(", ").gsub!("_", "\:")%></td>
+		<td class="green_row"> <%= upload.sourcedata_content_type%></td>
+		<td class="green_row"> <%= upload.date_ranges.pluck(:date_range).join(", ")%>
+		<td class="green_row"> <%= upload.total_rows%></td>
+		<td class="green_row"> <%= upload.rows_completed%></td>
+        <td class="green_row"> <%= number_to_percentage(upload.percentage_complete, :precision => 0)%></td>
+		</td>		
+			<td class="green_row">Parsing Complete! </td>	
+				<td class="green_row"></td>	
+		<%elsif (upload.status == 4 ) %>
+
+<%if (["1","2","3","4"].include?"#{upload.status}") %>
+				<td class="yellow_row"> <%= button_to "View File: #{upload.sourcedata_file_name}", upload,  :method=>:get%></td>
+			<%else%>
+				<td class="yellow_row"> <%= "#{upload.sourcedata_file_name}"%></td>
+			<%end%>
+			 <% path_arr = upload.f_path.split("\/")%>
+		<td class="yellow_row"><%= path_arr[-3..-2].join(", ").gsub!("_", "\:")%></td>
+		<td class="yellow_row"> <%= upload.sourcedata_content_type%></td>
+		<td class="yellow_row"> <%= upload.date_ranges.pluck(:date_range).join(", ")%>
+		<td class="yellow_row"> <%= upload.total_rows%></td>
+		<td class="yellow_row"> <%= upload.rows_completed%></td>
+        <td class="yellow_row"> <%= number_to_percentage(upload.percentage_complete, :precision => 0)%></td>
+		</td>		
+
+
+
+			<td class="yellow_row">Waiting for previous file to complete ... in queue</td>	
+			<td class="yellow_row"></td>	
+		<%else%>
+
+<%if (["1","2","3","4"].include?"#{upload.status}") %>
+				<td class="grey_row"> <%= button_to "View File: #{upload.sourcedata_file_name}", upload,  :method=>:get%></td>
+			<%else%>
+				<td class="grey_row"> <%= "View File: #{upload.sourcedata_file_name}"%></td>
+			<%end%>
+			 <% path_arr = upload.f_path.split("\/")%>
+		<td class="grey_row"><%= path_arr[-3..-2].join(", ").gsub!("_", "\:")%></td>
+		<td class="grey_row"> <%= upload.sourcedata_content_type%></td>
+		<td class="grey_row"> <%= upload.date_ranges.pluck(:date_range).join(", ")%>
+		<td class="grey_row"> <%= upload.total_rows%></td>
+		<td class="grey_row"> <%= upload.rows_completed%></td>
+        <td class="grey_row"> <%= number_to_percentage(upload.percentage_complete, :precision => 0)%></td>
+		</td>		
+
+
+
+			<td class="grey_row">File doesn't exist on Server</td>	
+			<td class="grey_row"></td>	
+		<%end%>
+
+
+</tr>

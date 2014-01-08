@@ -1,0 +1,53 @@
+
+<div>
+<%= button_to_function "Show/Hide Instructions", "$('.instructions').toggle()" %>
+</div>
+<div class="instructions">
+<pre >
+<b>Step 2: Adding data from files to the Database</b>
+<ol>
+<li>Verify all file names are in the right naming convention eg: National.csv, Calgary.csv, etc...</li>
+<li>If no, re upload the correct files</li>
+<li>Note that you can see the time of the file uploaded and the date in the columns for sanity check</li>
+<li>Before you start the import, the <b>total rows</b> is empty</li>
+<li>You will know that the imports have begun when you press the <b>Import button</b> and <b>Refesh the webpage</b></li>
+<li>Notice after starting a file import and refreshing the page the total rows shows a number and percentage completed is populated</li>
+<li>Keep periodically refreshing the page to get updated counts</li>
+<li>You can hit the import button on all the files to be imported. They will run simultaneously in order to speed up the process</li>
+</ol>
+</pre>
+</div>
+<div id="uploads_table">
+<table class="table table-striped">
+  <thead>
+    <tr>
+	  
+	  <th>File name</th>
+	  <th>Upload Date,Time</th>
+	  <th>File Type</th>
+	  <th>Calendar Air Dates in file</th>
+	  <th>Total Rows</th>
+	  <th>Rows read</th>
+	  <th>Completed</th>
+	  <th>Status</th>
+	  <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody id="table_rows">
+    <%= render (@uploads)%> <%# partial _upload.html.erb %> 
+  </tbody>
+
+</div>
+</table>
+
+<%= content_for :bottom_javascripts do %>
+<%= javascript_tag do %> 
+alert("Testing")
+<%end%>
+<%end%>
+
+
+
+
+
+

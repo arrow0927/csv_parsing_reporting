@@ -1,0 +1,23 @@
+<tr id= "show_upload_table_rows">
+		
+		<td> <%="#{@u.sourcedata_file_name}"%></td>
+			 <% path_arr = @u.f_path.split("\/")%>
+		<td><%= path_arr[-3..-2].join(", ").gsub!("_", "\:")%></td>
+		<td> <%= @u.sourcedata_content_type%></td>
+		<td> <%= @u.date_ranges.pluck(:date_range).join(", ")%>
+		<td> <%= @u.total_rows%></td>
+		<td> <%= @u.rows_completed%></td>
+		<%if (@u.status == 0 ) %>
+			<td id="red_row">Error </td>
+		<%elsif (@u.status == 1 ) %>
+			<td id="yellow_row">File saved on server to be parsed</td>
+		<%elsif (@u.status == 3 ) %>
+			<td id="yellow_row">File is being parsed </td>	
+		<%elsif (@u.status == 2 ) %>
+			<td id="green_row">File parsing Complete </td>	
+		<%else%>
+			<td id="red_row">File doesn't exist on Server</td>	
+		<%end%>
+
+</tr>
+

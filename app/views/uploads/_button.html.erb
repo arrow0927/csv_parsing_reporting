@@ -1,0 +1,17 @@
+<%#When this button is pressed UploadsController#update is fired with parameter "job= parse"%>
+<%= simple_form_for upload do |f| %>
+<%= f.hidden_field :id, :value => upload.id %>
+<%= f.hidden_field :job, :value => "parse"%>
+	<%if (upload.status == 0)%>
+		<%= "Error" %>
+	<%elsif (upload.status == 1)%>
+		<%= f.button :submit, "Add \n#{upload.sourcedata_file_name}\n to Database", :class=> "add_data_button" %>
+	<%elsif (upload.status == 2)%>
+		<%= "File has been added to DB" %>
+	<%elsif (upload.status == 3)%>
+		<%= "File is being added to DB" %>
+	<%else %>
+		<%= "File has been removed from server" %>
+	<%end%>
+<% end %>
+

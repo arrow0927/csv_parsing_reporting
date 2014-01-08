@@ -1,0 +1,11 @@
+<%= simple_form_for task.uploads.build, :html=> {:multipart => true} do |f| %>
+    <%= f.hidden_field :task_id, :value => task.id %>
+
+ 	<%= f.error_notification %>
+	<%= f.file_field :sourcedata %>
+	<%= f.button :submit, "Upload this file \nto server" ,:confirm => "Upload File",:class=> "upload_tasks_button"%>
+ 
+<% end %>
+
+
+

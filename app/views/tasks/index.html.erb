@@ -1,0 +1,40 @@
+
+<div >
+<%= button_to_function "Show/Hide Instructions", "$('.instructions').toggle()" %></h5>
+</div>
+<div class="instructions">
+<pre>
+<b>Step 1:  Uploading files to the server to be parsed:</b>
+<ol>
+<li>Convert BBM Excel files to csv using Open Office on a Mac</li>
+<li>Filenames should should be EXACTLY the same as Name columns below(including Capital letter). eg: National.csv, Toronto.csv, Calgary.csv...</li>
+<li>Choose a File then Upload it</li>
+<li>Once all files are uploaded proceed to Step 2: Uploads</li>
+</ol>
+</pre>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+	  <th>Description</th>
+	  <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tasks.each do |t| %>
+      <tr>
+		<td> <%= t.name %></td>
+		<td> <%= t.description %></td>
+<% if false%>
+The following method will render the form partial from the uploads view 
+and call the create method from the uploads. Pass the upload object to the create
+method. which will reroute to upload/index with a flash notification
+<% end %>
+		<td><%=render "uploads/form" , :task => t %></td>
+	
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

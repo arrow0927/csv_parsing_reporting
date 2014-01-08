@@ -1,0 +1,47 @@
+<%- model_class = ProgramSlot -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:program_id) %>:</strong></dt>
+  <dd><%= @program_slot.program_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:market_id) %>:</strong></dt>
+  <dd><%= @program_slot.market_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:channel_id) %>:</strong></dt>
+  <dd><%= @program_slot.channel_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:infosys_start) %>:</strong></dt>
+  <dd><%= @program_slot.infosys_start %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:infosys_end) %>:</strong></dt>
+  <dd><%= @program_slot.infosys_end %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:infosys_airdate) %>:</strong></dt>
+  <dd><%= @program_slot.infosys_airdate %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:infosys_day) %>:</strong></dt>
+  <dd><%= @program_slot.infosys_day %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:calendar_start) %>:</strong></dt>
+  <dd><%= @program_slot.calendar_start %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:calendar_end) %>:</strong></dt>
+  <dd><%= @program_slot.calendar_end %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:calendar_airdate) %>:</strong></dt>
+  <dd><%= @program_slot.calendar_airdate %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:timeslot) %>:</strong></dt>
+  <dd><%= @program_slot.timeslot %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:normalized_start_time) %>:</strong></dt>
+  <dd><%= @program_slot.normalized_start_time %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:normalized_date) %>:</strong></dt>
+  <dd><%= @program_slot.normalized_date %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:normalized_end_time) %>:</strong></dt>
+  <dd><%= @program_slot.normalized_end_time %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              program_slots_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_program_slot_path(@program_slot), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              program_slot_path(@program_slot),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>

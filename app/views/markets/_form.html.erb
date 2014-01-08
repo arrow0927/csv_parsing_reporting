@@ -1,0 +1,8 @@
+<%= simple_form_for @market, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :market_name %>
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                markets_path, :class => 'btn' %>
+  </div>
+<% end %>

@@ -1,0 +1,36 @@
+<%= javascript_include_tag "visualization_show" %>
+<header>
+<p id="notice"><%= notice %></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th> Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+		<td><%=@visualization.name%></td>
+		<td><%=@visualization.code%> </td>
+		<td><%=@visualization.description%></td>
+      </tr>
+
+  </tbody>
+</table>
+
+</header>
+
+<body>
+<div id="bar_graph">
+
+</body>
+
+
+
+
+<p>
+<%= link_to 'Edit', edit_visualization_path(@visualization) %> |
+<%= link_to 'Back', visualizations_path %>
+</p>
